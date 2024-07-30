@@ -155,7 +155,7 @@ export default function Home() {
 
           <Link
             className="mb-16 w-full md:w-auto inline-flex flex-row justify-center items-center gap-4 rounded-md bg-red-800 p-6 py-3 text-xl font-semibold text-white hover:bg-red-700 hover:text-white"
-            href={`https://wa.me/${process.env.PHONE_WHATSAPP}?text=${process.env.MESSAGE_WHATSAPP}`}
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_WHATSAPP}?text=${process.env.NEXT_PUBLIC_MESSAGE_WHATSAPP}`}
             target="_blank"
           >
             <Send />

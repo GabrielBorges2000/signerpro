@@ -73,7 +73,7 @@ export default function ComunicacaoVisual() {
                                 <p className="text-center font-medium text-gray-700">{text}</p>
                                 <Link
                                     className="mb-16 inline-flex flex-row items-center gap-4 rounded-md bg-red-800 p-6 py-3 text-xl font-semibold text-white hover:bg-red-700 hover:text-white"
-                                    href={`https://wa.me/${process.env.PHONE_WHATSAPP}?text=${process.env.MESSAGE_WHATSAPP}`}
+                                    href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_WHATSAPP}?text=${process.env.NEXT_PUBLIC_MESSAGE_WHATSAPP}`}
                                     target="_blank"
                                 >
                                     Faça um orçamento

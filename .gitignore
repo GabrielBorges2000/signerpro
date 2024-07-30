@@ -37,3 +37,5 @@ next-env.d.ts
 
 # video
 /public/video.mp4
+
+.vercel

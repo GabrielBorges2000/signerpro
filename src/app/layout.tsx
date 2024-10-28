@@ -11,9 +11,15 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Signerpro",
-  description: "Gráfica digital",
+  title: "Signerpro - Gráfica Digital",
+  description: "Bem-vindo à Signerpro, sua gráfica digital de confiança. Especializada em comunicação visual, personalização de veículos, camisetas e quadros decorativos, oferecemos soluções completas e personalizadas para destacar a sua marca e o seu estilo.",
+  authors: {
+    name: "CODEBORGES",
+    url: "https://www.codeborges.com/",
+  },
+  robots: "index, follow",
 }
+
 
 export default function RootLayout({
   children,
@@ -22,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className} bg-white`}>
+      <body className={`${roboto.className} bg-gray-200`}>
         <Header />
         {children}
         <Footer />

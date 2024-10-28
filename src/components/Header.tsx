@@ -19,17 +19,22 @@ const menus = [
     {
         icon: <House className="icon-md" />,
         title: 'Home',
-        href: '/',
+        href: '#inicio',
     },
     {
         icon: <Airplay className="icon-md" />,
-        title: 'Comunicação Visual',
-        href: '/comunicacao-visual',
+        title: 'Sobre',
+        href: '#about',
+    },
+    {
+        icon: <Airplay className="icon-md" />,
+        title: 'Serviços',
+        href: '#servicos',
     },
     {
         icon: <ImageIcon className="icon-md" />,
-        title: 'Quadros Decorativos',
-        href: '/quadros-decorativos',
+        title: 'Contato',
+        href: '#contato',
     },
 ]
 
@@ -56,7 +61,7 @@ export function Header() {
         <div
             className={`
                 flex items-center w-full h-16 px-4 md:px-14 justify-between fixed top-0 z-20 transition-colors duration-300 ease-in-out
-                ${scrolled ? 'bg-red-800 shadow-sm shadow-gray-500' : 'bg-transparent dark:bg-transparent'}
+                ${scrolled ? 'bg-gray-800 shadow-sm shadow-gray-500' : 'bg-transparent dark:bg-transparent'}
             `}
         >
             <div className="flex flex-row gap-2 items-center">
@@ -83,24 +88,48 @@ export function Header() {
                             return (
                                 <SheetClose asChild>
                                     <Link href={menu.href} key={menu.href} className="flex gap-1 items-center justify-center">
-                                        {menu.icon}
+                                        {/* {menu.icon} */}
                                         <p>{menu.title}</p>
                                     </Link>
                                 </SheetClose>
                             )
                         })}
+                        <Button
+                            className="inline-flex h-10 items-center justify-center rounded-md bg-primary p-6 text-sm font-medium text-primary-foreground 
+              shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 
+              focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                        >
+                            <Link
+                                href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_WHATSAPP}?text=${process.env.NEXT_PUBLIC_MESSAGE_WHATSAPP}`}
+                                target="_blank"
+                            >
+                                Faça um Orçamento
+                            </Link>
+                        </Button>
                     </nav>
                 </SheetContent>
             </Sheet>
             <nav className="hidden md:flex gap-6 text-white">
                 {menus.map((menu) => {
                     return (
-                        <Link href={menu.href} key={menu.href} className="flex gap-1 items-center justify-center">
-                            {menu.icon}
+                        <Link href={menu.href} key={menu.href} className="flex gap-1 items-center justify-center hover:text-gray-300">
+                            {/* {menu.icon} */}
                             <p>{menu.title}</p>
                         </Link>
                     )
                 })}
+                <Button
+                    className="inline-flex h-10 items-center justify-center rounded-md bg-primary p-6 text-sm font-medium text-primary-foreground 
+              shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 
+              focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                >
+                    <Link
+                        href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_WHATSAPP}?text=${process.env.NEXT_PUBLIC_MESSAGE_WHATSAPP}`}
+                        target="_blank"
+                    >
+                        Faça um Orçamento
+                    </Link>
+                </Button>
             </nav>
         </div>
     );
